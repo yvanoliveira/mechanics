@@ -1,5 +1,5 @@
 ## Dinâmica de um robô SCARA
-###### Autor: Yvan Pereira de Oliveira
+###### Projeto elaborado por Yvan Pereira de Oliveira.
 ![SCARA_page-0001](https://user-images.githubusercontent.com/85844516/128549130-790845b9-a230-423a-b31b-e0dd2dcc71de.jpg)
 ![SCARA_page-0002](https://user-images.githubusercontent.com/85844516/128549133-cbe5dfc4-c7ff-475d-b12d-41bf7a85bb8b.jpg)
 ![SCARA_page-0003](https://user-images.githubusercontent.com/85844516/128549134-7276666f-0f9c-4412-ad90-9d37dacecc15.jpg)
