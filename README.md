@@ -2,3 +2,8 @@
 Trabalho elaborado por Yvan Pereira de Oliveira.
 
 [SCARA.ipynb](https://github.com/yvanoliveira/yvanoliveira.github.io/blob/main/SCARA.ipynb)
+
+## Análise de velocidade de um mecanismo de 4 barras
+Trabalho elaborado por Yvan Pereira de Oliveira.
+
+[SCARA.ipynb](https://github.com/yvanoliveira/yvanoliveira.github.io/blob/main/SCARA.ipynb)
