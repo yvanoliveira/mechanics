@@ -36,19 +36,51 @@
         <ol>
           <li>
             <p>Referencial inercial:</p>
-
             <pre><code>N = ps.ReferenceFrame('N')</code></pre>
           </li>
+          
           <li>
             <p>Referenciais móveis:</p>
-
             <pre><code>A = N.orientnew('A','Axis',[theta,N.z])
 B = A.orientnew('B','Axis',[phi,A.z])
 C = B.orientnew('C','Axis',[gamma,B.z])</code></pre>
           </li>
-        </ol>
+          
+          <li>
+            <p>Variáveis das distâncias entre as origens dos sistemas referenciais:</p>
+            <pre>x1,x2,x3 = sy.symbols('x1 x2 x3')
+x4 = ps.dynamicsymbols('x4')<code>
+            </code></pre>
+          </li>
 
-       
+          <li>
+            <p>Variáveis dinâmicas:</p>
+            <pre>theta,phi,gamma = ps.dynamicsymbols('theta phi gamma')<code>
+            </code></pre>
+          </li>
+         </ol>
+        
+        <p><b>Cinemática</b></p>
+        
+        <ol>
+          <li>
+            <p>Velocidades e acelerações angulares dos referenciais:</p>
+            <pre><code>A.ang_vel_in(N)
+A.ang_acc_in(N)
+B.ang_vel_in(N)
+B.ang_acc_in(N)
+C.ang_vel_in(N)
+C.ang_acc_in(N)
+            </code></pre>
+          </li>
+          
+           <li>
+            <p></p>
+            <pre><code>
+            </code></pre>
+          </li>
+          
+        </ol>
       </section>
       <footer>
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
