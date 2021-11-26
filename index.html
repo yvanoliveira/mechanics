@@ -17,7 +17,7 @@
       <header>
         <h1>Yvan Oliveira</h1>
         <p>Estudante de Engenharia Mecânica e Técnico em Informática.</p>
-        <p class="view"><a href="http://github.com/yvanoliveira/yvanoliveira.github.io">Meu repositório no GitHub.</a></p>
+        <p class="view"><a href="http://github.com/yvanoliveira/yvanoliveira.github.io">Meu repositório no GitHub.<small>Projetos elaborados por mim em linguagem Pyhton.</small></a></p>
         <ul>
           <li><a href="https://www.linkedin.com/in/yvanoliveira/">Contato<strong>LinkedIn</strong></a></li>
           <li><a href="mailto:yvan_oliveira@outlook.com?subject=Olá/">Contato<strong>E-mail</strong></a></li>
@@ -48,15 +48,13 @@ C = B.orientnew('C','Axis',[gamma,B.z])</code></pre>
           
           <li>
             <p>Variáveis das distâncias entre as origens dos sistemas referenciais:</p>
-            <pre>x1,x2,x3 = sy.symbols('x1 x2 x3')
-x4 = ps.dynamicsymbols('x4')<code>
-            </code></pre>
+            <pre><code>x1,x2,x3 = sy.symbols('x1 x2 x3')
+x4 = ps.dynamicsymbols('x4')</code></pre>
           </li>
 
           <li>
             <p>Variáveis dinâmicas:</p>
-            <pre>theta,phi,gamma = ps.dynamicsymbols('theta phi gamma')<code>
-            </code></pre>
+            <pre><code>theta,phi,gamma = ps.dynamicsymbols('theta phi gamma')</code></pre>
           </li>
          </ol>
         
@@ -78,12 +76,55 @@ C.ang_acc_in(N)</code></pre>
         <h2>Análise de velocidade de um mecanismo de 4 barras</h2>
         
         <p><em>Visualizar o <a href="https://github.com/yvanoliveira/yvanoliveira.github.io/blob/main/An%C3%A1lise_de_velocidade.ipynb">código completo</a>.</em></p>
-        <p><img src="mcns.png" alt="mecanismo de 4 barras" width=500 height=500>
-        <p></p>
-        <p><i>Para visualizar o modelo do mecanismo ir até o código completo.</p>
-        
+        <p><img src="mcns.png" alt="mecanismo de 4 barras" width=400 height=400></p>
+        <p><i>Para visualizar o modelo do mecanismo ir até o código completo.</i></p>
+		
+        <p>Considerando que anteriormente em uma análise de posição foram calculados os valores de θ1, θ2 e θ3, assim como 𝑤2. Se sabe também os comprimentos dos elos 𝑅1, 𝑅2, 𝑅3 e 𝑅4.</p>
+        <p>Para descobrirmos então os valores de 𝑤3 e 𝑤4, assim também como as velocidades das juntas, foram realizados os procedimentos abaixo como segue.</p>
+		
+		<ol>
+          <li>
+            Após desenhar e analisar a malha fechada do mecanismo, sabe-se que:
+			<pre><code>𝑅2 + 𝑅3 - 𝑅4 - 𝑅1 = 0 #Equação vetorial da malha fechada</code></pre>
+          </li>
           
-          
+          <li>
+             Deve-se converter os vetores dos comprimentos dos elos para a forma de números complexos, podendo representá-los como a, b, c, d, sendo estes valores escalares.
+			 <br></br><p>Deve-se importar então as bibliotecas necessárias para o desenvolvimento do programa.</p>
+            <pre><code>from sympy import *
+import numpy as ny
+import matplotlib.pyplot as plt</code></pre>
+          </li>
+		  
+		  <li>
+		  As seguintes variáveis simbólicas são declaradas:
+		  <pre><code>a,b,c,d,t,theta1 = symbols('a b c d t theta1')</code></pre>
+		  </li>
+		  
+		  <li>
+		  E são declaradas as seguintes variáveis em função do tempo:
+		  <pre><code>theta2 = Function('theta2')(t)
+theta3 = Function('theta3')(t)
+theta4 = Function('theta4')(t)
+</code></pre>
+		  </li>
+		  
+		  <li>
+		  Para comodidade usual da linguagem, já que a biblioteca sympy utiliza as seguintes notações de forma maisúscula, pode-se fazer:
+		  <pre><code>e = E
+i = I</code></pre>
+		  </li>
+		  
+		  <li>
+		  A partir da equação vetorial da malha fechada, é possível obter a mesma equação em forma de números complexos:
+		  <pre><code>eq1 = a*e**(i*theta2) + b*e**(i*theta3) - c*e**(i*theta4) - d*e**(i*theta1)</code></pre>
+
+		  <p>A saída da equação 1 em formato de números complexos é:
+		  <br></br>
+		  <img src="out_eq1.png" alt="out_eq1" width=200 height=20></p>
+		  </li>
+		  
+		</ol>
       </section>
       <footer>
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
