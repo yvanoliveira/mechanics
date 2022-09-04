@@ -4,9 +4,6 @@
 - 💞️ I’m looking to collaborate on ...
 - 📫 How to reach me ...
 
-## Appmode
-https://mybinder.org/v2/gh/yvanoliveira/yvanoliveira.github.io/HEAD?labpath=https%3A%2F%2Fgithub.com%2Fyvanoliveira%2Fyvanoliveira.github.io%2Fblob%2Fmain%2Fapp.ipynb
-
 
 ## Dinâmica de um robô SCARA
 
